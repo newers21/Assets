@@ -2,16 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+
+public class MainThread : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private int allMoney; 
+
+    void FixedUpdate()
+    {
+        
+    }
+}
+
+
+public static class GameManager
+{
+    private static int income; 
+    private static int people; 
+    private static int buildings; 
+
+    static void IncreaseIncome()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    static void IncreasePeople()
+    {
+
+    }
+
+    static void AddBuilding()
     {
         
     }
