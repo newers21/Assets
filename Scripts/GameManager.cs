@@ -2,25 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public static class GameManager
 {
-    private static int income; 
-    private static int people; 
-    private static int buildings; 
+    private static int income;
+    private static int people;
+    private static int buildings;
+    public static List<Building> buildingList = new List<Building>();
 
-    static void IncreaseIncome()
+    public static void IncreaseIncome()
     {
         
     }
 
-    static void IncreasePeople()
-    {
-
-    }
-
-    static void AddBuilding()
+    public static void IncreasePeople()
     {
         
+    }
+
+    public static void AddBuilding(Building newBuilding)
+    {
+        buildingList.Add(newBuilding);
     }
 }
