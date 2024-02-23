@@ -12,22 +12,29 @@ public class Building : MonoBehaviour
     private bool isCreate;
 
     private Image buildingImageComponent;
+    private Animation animationBuildingComponent;
 
     public void Start()
     {
         buildingImageComponent = GetComponent<Image>();
+        animationBuildingComponent = GetComponent<Animation>();
+        if (buildingImageComponent == null)
+        {
+            Debug.LogError("missing buildingimageComponent");
+            return;
+        }
+
+        if (animationBuildingComponent == null)
+        {
+            Debug.LogError("missing animationBuildingComponent");
+            return;
+        }
     }
 
     public void OnClick()
     {
         if (isCreate)
         {
-            return;
-        }
-
-        if (buildingImageComponent == null)
-        {
-            Debug.LogError("miss");
             return;
         }
 
