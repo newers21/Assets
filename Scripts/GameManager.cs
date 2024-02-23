@@ -7,7 +7,7 @@ public static class GameManager
     private static int income;
     private static int people;
     private static int buildings;
-    public static List<Building> buildingList = new List<Building>();
+    private static List<Building> buildingList = new List<Building>();
 
     public static void IncreaseIncome()
     {

@@ -9,25 +9,30 @@ public class Building : MonoBehaviour
     [SerializeField] private Sprite buildingAsset;
     [SerializeField] private bool cost;
     [SerializeField] private Animation buildingAnimationComponent;
+    private bool isCreate;
 
     private Image buildingImageComponent;
-    [SerializeField] private bool isCreate;
 
-    public void Awake()
+    public void Start()
     {
         buildingImageComponent = GetComponent<Image>();
     }
 
     public void OnClick()
     {
-        if (buildingImageComponent == null) 
+        if (isCreate)
         {
-            Debug.LogError("!!!");
             return;
         }
 
-        GameManager.AddBuilding(this);
+        if (buildingImageComponent == null)
+        {
+            Debug.LogError("miss");
+            return;
+        }
+
         isCreate = true;
+        GameManager.AddBuilding(this); 
     }
 }
 
