@@ -10,4 +10,9 @@ public class MainThread : MonoBehaviour
     {
 
     }
+
+    private void allMoneyCount(int amount)
+    {
+        allMoney += amount;
+    }
 }

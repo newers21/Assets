@@ -8,6 +8,9 @@ public class Building : MonoBehaviour
 {
     [SerializeField] private Sprite buildingAsset;
     [SerializeField] private bool cost;
+    [SerializeField] private int moneyPerResident;
+    [SerializeField] private int maxResidents;
+    [SerializeField] private int residentsPerSecond;
     [SerializeField] private Animation buildingAnimationComponent;
     private bool isCreate;
 
