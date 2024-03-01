@@ -8,11 +8,16 @@ public class MainThread : MonoBehaviour
 
     void FixedUpdate()
     {
+        allMoney += GameManager.income;
 
-    }
+        foreach (Building building in GameManager.buildingList)
+        {
+            GameManager.income += building.moneyPerResident * building.currentResidents;
 
-    private void allMoneyCount(int amount)
-    {
-        allMoney += amount;
+            if (building.currentResidents < building.maxResidents)
+            {
+                building.currentResidents += building.residentsPerSecond;
+            }
+        }
     }
 }

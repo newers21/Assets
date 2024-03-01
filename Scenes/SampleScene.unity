@@ -214,8 +214,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingAsset: {fileID: 21300000, guid: 4b6173530c67ebf4cb42426dd924a76c, type: 3}
   cost: 0
+  moneyPerResident: 0
+  maxResidents: 0
+  residentsPerSecond: 0
   buildingAnimationComponent: {fileID: 266841766}
-  isCreate: 0
 --- !u!111 &266841766
 Animation:
   m_ObjectHideFlags: 0
@@ -411,7 +413,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -493,18 +494,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 33.607, y: 0, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a9aa12a6d5a5d24483a4dbae5119c4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1471291287
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,8 +810,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingAsset: {fileID: 21300000, guid: 548257dafcbac604abc50048b2888d82, type: 3}
   cost: 0
+  moneyPerResident: 0
+  maxResidents: 0
+  residentsPerSecond: 0
   buildingAnimationComponent: {fileID: 1641679040}
-  isCreate: 0
 --- !u!111 &1641679040
 Animation:
   m_ObjectHideFlags: 0
@@ -1004,8 +995,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingAsset: {fileID: 21300000, guid: 2fc129622ae4c5f46a80b511c225c276, type: 3}
   cost: 0
+  moneyPerResident: 0
+  maxResidents: 0
+  residentsPerSecond: 0
   buildingAnimationComponent: {fileID: 1859396536}
-  isCreate: 0
 --- !u!111 &1859396536
 Animation:
   m_ObjectHideFlags: 0
@@ -1112,8 +1105,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingAsset: {fileID: 21300000, guid: 08388119913b9764588e8432ca180a99, type: 3}
   cost: 0
+  moneyPerResident: 0
+  maxResidents: 0
+  residentsPerSecond: 0
   buildingAnimationComponent: {fileID: 2015839922}
-  isCreate: 0
 --- !u!111 &2015839922
 Animation:
   m_ObjectHideFlags: 0

@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class Building : MonoBehaviour
 {
     [SerializeField] private Sprite buildingAsset;
-    [SerializeField] private bool cost;
-    [SerializeField] private int moneyPerResident;
-    [SerializeField] private int maxResidents;
-    [SerializeField] private int residentsPerSecond;
+    [SerializeField] public bool cost;
+    [SerializeField] public int moneyPerResident;
+    [SerializeField] public int maxResidents;
+    [SerializeField] public int residentsPerSecond;
     [SerializeField] private Animation buildingAnimationComponent;
+    [SerializeField] public int currentResidents;
     private bool isCreate;
 
     private Image buildingImageComponent;
