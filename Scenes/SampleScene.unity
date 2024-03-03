@@ -134,8 +134,8 @@ GameObject:
   - component: {fileID: 266841762}
   - component: {fileID: 266841764}
   - component: {fileID: 266841763}
-  - component: {fileID: 266841765}
   - component: {fileID: 266841766}
+  - component: {fileID: 266841767}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -200,24 +200,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266841761}
   m_CullTransparentMesh: 1
---- !u!114 &266841765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266841761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b910e3ee8784ad949b7ebb3a2021bbbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingAsset: {fileID: 21300000, guid: 4b6173530c67ebf4cb42426dd924a76c, type: 3}
-  cost: 0
-  moneyPerResident: 0
-  maxResidents: 0
-  residentsPerSecond: 0
-  buildingAnimationComponent: {fileID: 266841766}
 --- !u!111 &266841766
 Animation:
   m_ObjectHideFlags: 0
@@ -233,6 +215,25 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &266841767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266841761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b910e3ee8784ad949b7ebb3a2021bbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingAsset: {fileID: 0}
+  cost: 0
+  moneyPerResident: 0
+  maxResidents: 0
+  residentsPerSecond: 0
+  buildingAnimationComponent: {fileID: 0}
+  currentResidents: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,12 +809,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b910e3ee8784ad949b7ebb3a2021bbbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingAsset: {fileID: 21300000, guid: 548257dafcbac604abc50048b2888d82, type: 3}
+  buildingAsset: {fileID: 21300000, guid: 08388119913b9764588e8432ca180a99, type: 3}
   cost: 0
   moneyPerResident: 0
   maxResidents: 0
   residentsPerSecond: 0
   buildingAnimationComponent: {fileID: 1641679040}
+  currentResidents: 0
 --- !u!111 &1641679040
 Animation:
   m_ObjectHideFlags: 0
@@ -915,8 +917,8 @@ GameObject:
   - component: {fileID: 1859396532}
   - component: {fileID: 1859396534}
   - component: {fileID: 1859396533}
-  - component: {fileID: 1859396535}
   - component: {fileID: 1859396536}
+  - component: {fileID: 1859396538}
   m_Layer: 5
   m_Name: Image (3)
   m_TagString: Untagged
@@ -981,24 +983,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859396531}
   m_CullTransparentMesh: 1
---- !u!114 &1859396535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859396531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b910e3ee8784ad949b7ebb3a2021bbbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingAsset: {fileID: 21300000, guid: 2fc129622ae4c5f46a80b511c225c276, type: 3}
-  cost: 0
-  moneyPerResident: 0
-  maxResidents: 0
-  residentsPerSecond: 0
-  buildingAnimationComponent: {fileID: 1859396536}
 --- !u!111 &1859396536
 Animation:
   m_ObjectHideFlags: 0
@@ -1014,6 +998,25 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &1859396538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859396531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b910e3ee8784ad949b7ebb3a2021bbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingAsset: {fileID: 21300000, guid: 4b6173530c67ebf4cb42426dd924a76c, type: 3}
+  cost: 1
+  moneyPerResident: 3
+  maxResidents: 100
+  residentsPerSecond: 1
+  buildingAnimationComponent: {fileID: 0}
+  currentResidents: 1
 --- !u!1 &2015839917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,12 +1106,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b910e3ee8784ad949b7ebb3a2021bbbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingAsset: {fileID: 21300000, guid: 08388119913b9764588e8432ca180a99, type: 3}
+  buildingAsset: {fileID: 21300000, guid: 2fc129622ae4c5f46a80b511c225c276, type: 3}
   cost: 0
   moneyPerResident: 0
   maxResidents: 0
   residentsPerSecond: 0
   buildingAnimationComponent: {fileID: 2015839922}
+  currentResidents: 0
 --- !u!111 &2015839922
 Animation:
   m_ObjectHideFlags: 0
