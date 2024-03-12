@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MainThread : MonoBehaviour
 {
-    private int allMoney;
+    public int allMoney;
 
     void FixedUpdate()
     {
-        allMoney = 0;
+        int money = 0;
 
         foreach (Building building in GameManager.buildingList)
         {
@@ -16,11 +16,11 @@ public class MainThread : MonoBehaviour
             if (building.currentResidents < building.maxResidents)
             {
                 building.currentResidents += building.residentsPerSecond;
-                allMoney += building.moneyPerResident * building.residentsPerSecond;
+                money += building.moneyPerResident * building.residentsPerSecond;
             }
         }
 
-        GameManager.income += allMoney;
-        Debug.Log("Money:" + allMoney);
+        GameManager.income += money;
+        Debug.Log("Money:" + GameManager.income);
     }
 }

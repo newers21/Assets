@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using UnityEngine;
 
 public static class GameManager
@@ -16,7 +17,7 @@ public static class GameManager
 
     public static void IncreasePeople()
     {
-        
+        Debug.Log("click");
     }
 
     public static void AddBuilding(Building newBuilding)

@@ -35,7 +35,7 @@ public class Building : MonoBehaviour
         }
     }
 
-    public void OnClick()
+    private void OnMouseDown()
     {
         if (isCreate)
         {
@@ -43,7 +43,9 @@ public class Building : MonoBehaviour
         }
 
         isCreate = true;
-        GameManager.AddBuilding(this); 
+        GameManager.AddBuilding(this);
+
+        Debug.Log("click");
     }
 }
 
