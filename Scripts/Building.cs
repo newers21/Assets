@@ -6,23 +6,25 @@ using UnityEngine.UI;
 
 public class Building : MonoBehaviour
 {
-    [SerializeField] private Sprite buildingAsset;
+    public GameObject buildingMain;
     [SerializeField] public bool cost;
     [SerializeField] public int moneyPerResident;
     [SerializeField] public int maxResidents;
     [SerializeField] public int residentsPerSecond;
-    [SerializeField] private Animation buildingAnimationComponent;
-    [SerializeField] public int currentResidents;
+    //[SerializeField] private Animation buildingAnimationComponent;
+    private SpriteRenderer spriteRenderer;
+    public int currentResidents;
     private bool isCreate;
 
-    private Image buildingImageComponent;
+    //private Image buildingImageComponent;
     private Animation animationBuildingComponent;
 
     public void Start()
     {
-        buildingImageComponent = GetComponent<Image>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
         animationBuildingComponent = GetComponent<Animation>();
-        if (buildingImageComponent == null)
+        if (spriteRenderer == null)
         {
             Debug.LogError("missing buildingimageComponent");
             return;
@@ -35,17 +37,18 @@ public class Building : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
+        Debug.Log("click");
         if (isCreate)
         {
             return;
         }
-
         isCreate = true;
         GameManager.AddBuilding(this);
 
-        Debug.Log("click");
+        buildingMain.SetActive(true);
+
     }
 }
 
