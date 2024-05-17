@@ -11,7 +11,8 @@ public class Building : MonoBehaviour
     [SerializeField] public int moneyPerResident;
     [SerializeField] public int maxResidents;
     [SerializeField] public int residentsPerSecond;
-    //[SerializeField] private Animation buildingAnimationComponent;
+    [SerializeField] public int buildingCost;
+
     private SpriteRenderer spriteRenderer;
     public int currentResidents;
     private bool isCreate;
@@ -21,9 +22,9 @@ public class Building : MonoBehaviour
 
     public void Start()
     {
-
         spriteRenderer = GetComponent<SpriteRenderer>();
         animationBuildingComponent = GetComponent<Animation>();
+
         if (spriteRenderer == null)
         {
             Debug.LogError("missing buildingimageComponent");
@@ -40,15 +41,23 @@ public class Building : MonoBehaviour
     public void OnMouseDown()
     {
         Debug.Log("click");
+        var buildingView = FindObjectOfType<BuildingView>();
+        if (buildingView != null)
+        {
+            buildingView.Show(this);
+        }
+    }
+
+    public void Build()
+    {
         if (isCreate)
         {
             return;
         }
+
         isCreate = true;
         GameManager.AddBuilding(this);
-
         buildingMain.SetActive(true);
-
     }
 }
 
