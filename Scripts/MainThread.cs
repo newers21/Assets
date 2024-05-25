@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainThread : MonoBehaviour
 {
-    public int allMoney;
+    [SerializeField] public int allMoney;
 
     void FixedUpdate()
     {
@@ -21,6 +21,6 @@ public class MainThread : MonoBehaviour
         }
 
         GameManager.income += money;
-        Debug.Log("Money:" + GameManager.income);
+        Debug.Log("Money:" + allMoney);
     }
 }

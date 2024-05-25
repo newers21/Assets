@@ -289,7 +289,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 898118642}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176450003
@@ -751,7 +752,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 898118642}
+  - {fileID: 496884106}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -895,7 +896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &496884106
 Transform:
   m_ObjectHideFlags: 0
@@ -905,15 +906,15 @@ Transform:
   m_GameObject: {fileID: 496884105}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 399.40005, y: 224.5, z: 0}
-  m_LocalScale: {x: 2.3464754, y: 2.3464754, z: 2.3464754}
+  m_LocalPosition: {x: 0.00004662731, y: 0, z: 0}
+  m_LocalScale: {x: 2.3500001, y: 2.3500001, z: 2.3500001}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 361427491}
   - {fileID: 1976077970}
   - {fileID: 197372689}
   - {fileID: 414036226}
-  m_Father: {fileID: 898118642}
+  m_Father: {fileID: 407640668}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1089,11 +1090,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingMain: {fileID: 81596685}
-  cost: 0
+  cost: 1
   moneyPerResident: 0
   maxResidents: 0
   residentsPerSecond: 0
-  buildingCost: 0
+  buildingCost: 5
   currentResidents: 0
 --- !u!212 &574019061
 SpriteRenderer:
@@ -1673,7 +1674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &898118642
 Transform:
   m_ObjectHideFlags: 0
@@ -1683,12 +1684,11 @@ Transform:
   m_GameObject: {fileID: 898118641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -400, y: -224.83723, z: 0}
-  m_LocalScale: {x: 1.0015022, y: 1.0015022, z: 1.0015022}
+  m_LocalPosition: {x: 0, y: 0.3440094, z: 0}
+  m_LocalScale: {x: 0.65548325, y: 0.65548325, z: 0.65548325}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 496884106}
-  m_Father: {fileID: 407640668}
+  m_Children: []
+  m_Father: {fileID: 87739202}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &898118643
 MonoBehaviour:
@@ -1705,6 +1705,7 @@ MonoBehaviour:
   menu: {fileID: 496884105}
   priceText: {fileID: 197372690}
   buyButton: {fileID: 414036227}
+  mainThread: {fileID: 1628558868}
 --- !u!1 &920902216
 GameObject:
   m_ObjectHideFlags: 0
@@ -27329,7 +27330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa28f3242061ccf40a133dd08e7e9618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allMoney: 0
+  allMoney: 10
 --- !u!4 &1628558869
 Transform:
   m_ObjectHideFlags: 0

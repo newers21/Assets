@@ -10,8 +10,14 @@ public class BuildingView : MonoBehaviour
     [SerializeField] private GameObject menu;
     [SerializeField] private TextMeshProUGUI priceText; 
     [SerializeField] private Button buyButton;
+    [SerializeField] private MainThread mainThread;
 
     private Building currentBuilding;
+
+    private void Start()
+    {
+        buyButton.onClick.AddListener(Buy);
+    }
 
     public void Show(Building building)
     {
@@ -22,11 +28,16 @@ public class BuildingView : MonoBehaviour
 
     public void Buy()
     {
-        if (GameManager.income >= currentBuilding.buildingCost)
+        if (mainThread.allMoney >= currentBuilding.buildingCost)
         {
-            GameManager.income -= currentBuilding.buildingCost;
+            Debug.Log("Enough Money");
+            mainThread.allMoney -= currentBuilding.buildingCost;
             currentBuilding.Build();
             Close();
+        }
+        else
+        {
+            Debug.Log("Not enough money");
         }
     }
 

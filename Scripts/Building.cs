@@ -46,6 +46,11 @@ public class Building : MonoBehaviour
         {
             buildingView.Show(this);
         }
+
+        else
+        {
+            Debug.LogError("No BuildingView");
+        }
     }
 
     public void Build()
