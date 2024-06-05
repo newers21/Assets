@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Building : MonoBehaviour
 {
     public GameObject buildingMain;
-    [SerializeField] public bool cost;
     [SerializeField] public int moneyPerResident;
     [SerializeField] public int maxResidents;
     [SerializeField] public int residentsPerSecond;
@@ -22,6 +21,8 @@ public class Building : MonoBehaviour
 
     public void Start()
     {
+        currentResidents = 1;
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         animationBuildingComponent = GetComponent<Animation>();
 
@@ -36,6 +37,7 @@ public class Building : MonoBehaviour
             Debug.LogError("missing animationBuildingComponent");
             return;
         }
+
     }
 
     public void OnMouseDown()
