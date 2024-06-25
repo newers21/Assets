@@ -12,6 +12,7 @@ public class BuildingView : MonoBehaviour
     [SerializeField] private Button buyButton;
     [SerializeField] private MainThread mainThread;
 
+    [SerializeField] private UImanager uiManager;
     private Building currentBuilding;
 
     private void Start()
@@ -24,6 +25,8 @@ public class BuildingView : MonoBehaviour
         currentBuilding = building;
         priceText.text = building.buildingCost.ToString();
         menu.SetActive(true);
+
+        uiManager.SetCurrentBuilding(building);
     }
 
     public void Buy()

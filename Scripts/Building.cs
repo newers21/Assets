@@ -16,7 +16,6 @@ public class Building : MonoBehaviour
     public int currentResidents;
     private bool isCreate;
 
-    //private Image buildingImageComponent;
     private Animation animationBuildingComponent;
 
     public void Start()
@@ -37,7 +36,6 @@ public class Building : MonoBehaviour
             Debug.LogError("missing animationBuildingComponent");
             return;
         }
-
     }
 
     public void OnMouseDown()
@@ -48,7 +46,6 @@ public class Building : MonoBehaviour
         {
             buildingView.Show(this);
         }
-
         else
         {
             Debug.LogError("No BuildingView");
@@ -67,4 +64,3 @@ public class Building : MonoBehaviour
         buildingMain.SetActive(true);
     }
 }
-
